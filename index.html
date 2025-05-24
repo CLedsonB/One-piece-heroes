@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-8926739670176161">
+
+  <meta name="author" content="CLedsonB">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index,nofollow">
+  <meta name="rating" content="14 years"/>
+  <meta name="copyright" content="© 2025 - CLedsonB"/>
+
+  <link rel="icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="root.css"/>
+  
+  <title>Pagina Principal</title>
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --cor: #6cdff3; 
+  --corBack: #041365;
+}
+html {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+html::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("img/sabaody.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: -1;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header div {
+  display: flex;
+  padding: 0 1.5%;
+}
+#perfil {
+  position: absolute;
+  left: 50px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eeee22;
+  border-radius: 20px;
+  z-index: 2;
+}
+.icons-topo{
+  position: relative;
+}
+.icons{
+  position: absolute;
+}
+.icon-menu{
+  width: 40px;
+}
+.icon-consumo {
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+}
+.consumo1 { left: 165px;}
+.consumo2 { left: 260px;}
+
+.icon-money{
+  width: 10px;
+  height: 10px;
+}
+.barra {
+  position : absolute;
+  background-color: #333333;
+  color: #eeeeee;
+  font-size: 8px;
+  margin: 5px 20px;
+  width: 60px;
+  height: 20px;
+  align-items: center;
+  border: 1px solid white;
+}
+.bNivel { left: 55px; }
+.bEnergia { left: 150px; }
+.bLuta { left: 250px; }
+
+.btnMais {
+  position: absolute;
+  top: 5px;
+  padding: 0;
+  height: 20px;
+  width: 20px;
+  font-size: 22px;
+  font-style: bold;
+  border-radius: 100%;
+  background-color: #dddd00;
+  border: none;
+  color: #fff;
+}
+.btn1 { left: 220px; }
+.btn2 { left: 320px; }
+.btn3 { left: 43px; top: 5px;}
+
+#dinheiro {
+  position: absolute;
+  left: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  background-color: #222222;
+  color: #dddddd;
+  border: 1px solid #ffff33;
+}
+#dinheiro > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 1px;
+  padding: 0 6px;
+}
+#dinheiro > div img {
+  margin-right: 5px;
+}
+#nav-main {
+  position: absolute;
+  left: 460px;
+  transform: rotate(90deg);
+  background-color: yellow;
+  color: black;
+  padding: 4px;
+  font-size: 22px;
+  font-style: bold;
+}
+#menu-suspenso {
+  position: fixed;
+  top: 6%;
+  left: 6%;
+  width: 80%;
+  height: 80%;
+  background-color: #440e0b;
+  border: 2px solid #b67233;
+  display: none;
+  z-index: 1000;
+}
+.menu-suspenso-conteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#fechar-menu {
+  position: absolute;
+  top: -60px;
+  left: 380px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #dd2222;
+  color: #ffffff;
+}
+#navg-esq {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 50px;
+}
+#retomar {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+}
+.items-nav-esq > button {
+  background-color: #333333;
+  color: #888833;
+  height: 25px;
+  width: 60px;
+  padding: 4px 10px;
+  margin-bottom: 4px;
+  font-size: 8px;
+  border: 1px solid #00ffff;
+  border-radius: 5px;
+}
+#elementos-centro {
+  display: inline-block;
+  vertical-align: top;
+}
+#img-centro {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+}
+#navg-dir-1 {
+  display: inline-block;
+  vertical-align: top;
+}
+.items-nav-dir-1 {
+  display: block;
+  margin-bottom: 10px;
+  padding: 4px;
+  height: 30px;
+  font-size: 8px;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #888833;
+  cursor: pointer;
+}
+#bEvento-semana {
+  background-color: #1111ff;
+  color: #dddddd;
+}
+#bColetar {
+  background-color: #aaaa44;
+  color: #ffffff;
+}
+.barraPP {
+  margin: 2px 0;
+  width: 80%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #ddd;
+  
+}
+</style>
+<body>
+  <header>
+    <div id="icons-topo">
+      <img class="icon-menu" src="icons/menu.png">
+      <img id="perfil" src="img/perfil.jpeg">
+      <div class="barra bNivel">
+        <div id="barra-nivel"></div>
+        <!-- Nivel Xp -->
+      </div>
+      <img class="icons icon-consumo consumo1" src="icons/energia.png">
+      <div class="barra bEnergia">
+        <div id="barra_energia">100/100</div>
+        <!-- Nivel Energia -->
+      </div>
+      <button class="btnMais btn1">+</button>
+      <img class="icons icon-consumo consumo2" src="icons/soco.png">
+      <div class="barra bLuta">
+        <div id="barra_luta">10/10</div>
+        <!-- Nivel Luta -->
+      </div>
+      <button class="btnMais btn2">+</button>
+      <div id="dinheiro">
+        <div>
+          <img class="icon-money" src="icons/berries.png">
+          <h6>0.00</h6>
+        </div> <br>
+        <div>
+          <img class="icon-money" src=icons/diamante.png>
+          <h6>0</h6>
+        </div>
+        <button class="btnMais btn3">+</button>
+      </div>
+      <button id="nav-main">|||</button>
+      <div id="menu-suspenso">
+        <div class="menu-suspenso-conteudo">
+          <!-- conteúdo da div overlay -->
+          <h1>menu suspenso</h1>
+          <button id="fechar-menu">X</button>
+        </div>    
+      </div>
+    </div>
+  </header>
+  <nav id="navg-esq">
+    <ul>
+      <li class="items-nav-esq">
+        <button><b>Aventura</b></button>
+        <button id="retomar"><b>-></b></button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Piratas</b></button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Atividades<br>
+          <span id="time-atvd">0 d 0 h</span></b>
+        </button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Liga</b></button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Mercado</b></button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Sorteio</b></button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Caminho dos Deuses</b></button>
+      </li>
+      <li class="items-nav-esq">
+        <button><b>Bando</b></button>
+      </li>
+    </ul>
+  </nav>
+  <div id="elementos-centro">
+    <img id="img-centro" src="img/img-centro.png">
+    <button id="btn-Nvisu">V</button>
+    <button class="btn edicao">E</button>
+  </div>
+  <nav id="navg-dir-1">
+    <button id="bEvento-semana" class="items-nav-dir-1">
+      <b>Evento da Semana</b><br>
+      <span id="time-evento">Termina em : 0 d 0 h</span>
+    </button>
+    <button id="bColetar" class="items-nav-dir-1">
+      <b>Coletar<br>
+      1.000.000</b>
+    </button>
+    <button class="items-nav-dir-1">
+      <b>Temporada</b><br>
+      <span>nivel 12</span>
+      <span>756 Xp</span>
+      <!-- Barra -->
+      <div class="barraPP bTemporada">
+        <div id="barra_temporada"></div>
+        <!-- Nivel Energia -->
+      </div>
+    </button>
+    <button class="items-nav-dir-1">
+      <b>Caminho do Valor</b>
+      <p>840/950 Xp</p>
+      <div class="barraPP bValor">
+        <div id="barra_valor"></div>
+      </div>
+    </button>
+    <button class="items-nav-dir-1">
+      <b>Caminho da Gloria</b>
+      <p>320/400 Xp</p>
+      <div class="barraPP bGloria">
+        <div id="barra_gloria"></div>
+      </div>
+    </button>
+  </nav>
+  <nav id="navg-dir-2"></nav>
+</body>
+<script>
+
+// ----- botao menu suspenso ----
+document.getElementById("nav-main").addEventListener("click", function() {
+  document.getElementById("menu-suspenso").style.display = "block";
+});
+document.getElementById("fechar-menu").addEventListener("click", function() {
+  document.getElementById("menu-suspenso").style.display = "none";
+});
+</script>
+</html>
